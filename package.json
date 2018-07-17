@@ -7,6 +7,8 @@
     "t-make-tsc": "./build/index.js"
   },
   "scripts": {
+    "prepublishOnly": "yarn build",
+    "precommit": "pretty-quick",
     "build": "tsc",
     "test": "jest"
   },
@@ -26,7 +28,8 @@
   "homepage": "https://github.com/EricTurf/t-make-tsc#readme",
   "devDependencies": {
     "@types/node": "^10.5.2",
-    "prettier": "^1.13.7",
+    "@types/prettier": "^1.13.2",
+    "husky": "^0.14.3",
     "pretty-quick": "^1.6.0",
     "typescript": "^2.9.2"
   },
@@ -34,6 +37,7 @@
     "axios": "^0.18.0",
     "chalk": "^2.4.1",
     "commander": "^2.16.0",
+    "prettier": "^1.13.7",
     "rxjs": "^6.2.2"
   }
 }

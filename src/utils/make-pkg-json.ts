@@ -15,6 +15,7 @@ const getPackageJSON = (projectName: Project): Object => {
     main: 'build/index.js',
     scripts: {
       prepublishOnly: 'yarn build',
+      precommit: 'pretty-quick',
       build: 'tsc',
       start: 'nodemon build/index.js',
       test: 'jest',
@@ -33,6 +34,7 @@ const getPackageJSON = (projectName: Project): Object => {
       nodemon: '^1.18.2',
       prettier: '^1.13.7',
       'ts-jest': '^23.0.0',
+      husky: '^0.14.3',
     },
   };
 };

@@ -16,7 +16,7 @@ export default () => (source$: Observable<Project>): Observable<Project> => {
         concatMap((res: AxiosResponse) =>
           writeFile(
             path.join(process.cwd(), projectName, '.gitignore'),
-            res.data.source
+            `${res.data.source}\nbuild`
           ).pipe(mapTo(projectName))
         )
       )
