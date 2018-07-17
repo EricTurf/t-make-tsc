@@ -1,6 +1,6 @@
 {
   "name": "t-make-tsc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to make basic typescript project",
   "main": "build/index.js",
   "bin": {

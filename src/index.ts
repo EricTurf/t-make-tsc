@@ -53,7 +53,7 @@ const createProject = (projectName: string): Observable<any> =>
     yarnInstall(),
     tap(() => console.log(`${chalk.cyan('yarn install complete')}`)),
     tap(() =>
-      console.log(`Creating inital git repo and commiting inital files`)
+      console.log(`Creating initial git repo and commiting inital files`)
     ),
     initializeGitRepo()
   );
