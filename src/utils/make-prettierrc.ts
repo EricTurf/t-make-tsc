@@ -18,7 +18,7 @@ export default () => (source$: Observable<Project>): Observable<Project> =>
   source$.pipe(
     concatMap((projectName: string) =>
       writeFile(
-        path.join(process.cwd(), projectName, 'tsconfig.json'),
+        path.join(process.cwd(), projectName, '.prettierrc'),
         JSON.stringify(getPrettierrc(), null, 2)
       ).pipe(mapTo(projectName))
     )
