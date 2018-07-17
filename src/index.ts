@@ -6,17 +6,15 @@ import path from 'path';
 import chalk from 'chalk';
 //@ts-ignore
 import { version } from '../package.json';
-console.log(version);
 
 import makePkgJson from './utils/make-pkg-json';
 import makeJestConfig from './utils/make-jest-config';
 import yarnInstall from './utils/yarn-install';
 import makeTsConfig from './utils/make-tsconfig';
 import makePrettierrc from './utils/make-prettierrc';
+import makeSrcDirectory from './utils/make-src-folder';
 import makeGitIgnore from './utils/make-git-ignore';
 import initializeGitRepo from './utils/initialize-git-repo';
-import makeSrcDirectory from './utils/make-src-folder';
-import prettyQuick from './utils/pretty-quick';
 
 import commander from 'commander';
 
@@ -50,7 +48,6 @@ const createProject = (projectName: string): Observable<any> =>
     tap(() => console.log(`Finished creating ${chalk.cyan('.gitignore')}`)),
     tap(() => console.log(`Creating ${chalk.cyan('src')} directory`)),
     makeSrcDirectory(),
-    prettyQuick(),
     tap(() => console.log(`Finished creating ${chalk.cyan('src')} directory`)),
     tap(() => console.log(`Running ${chalk.cyan('yarn install')}`)),
     yarnInstall(),
