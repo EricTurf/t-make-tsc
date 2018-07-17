@@ -1,0 +1,39 @@
+{
+  "name": "t-make-tsc",
+  "version": "1.0.0",
+  "description": "CLI tool to make basic typescript project",
+  "main": "build/index.js",
+  "bin": {
+    "t-make-tsc": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricTurf/t-make-tsc.git"
+  },
+  "keywords": [
+    "typescript",
+    "cli"
+  ],
+  "author": "ericturf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EricTurf/t-make-tsc/issues"
+  },
+  "homepage": "https://github.com/EricTurf/t-make-tsc#readme",
+  "devDependencies": {
+    "@types/node": "^10.5.2",
+    "prettier": "^1.13.7",
+    "pretty-quick": "^1.6.0",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "chalk": "^2.4.1",
+    "commander": "^2.16.0",
+    "rxjs": "^6.2.2"
+  }
+}
